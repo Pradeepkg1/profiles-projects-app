@@ -1,5 +1,5 @@
 
-const API_URL = "https://profiles-projects-app.onrender.com"; 
+const API_URL = "https://profiles-projects-app-backend.onrender.com"; 
 
 export async function fetchProfiles() {
   const res = await fetch(`${API_URL}/profiles`);
