@@ -55,21 +55,21 @@ candidate-playground/
 - cd candidate-playground .
    
 **2.Database Setup**
--Create a PostgreSQL database: createdb playground
--Run schema: psql -d playground -f backend/schema.sql
--Seed database: node backend/seed.js
+- Create a PostgreSQL database: createdb playground
+- Run schema: psql -d playground -f backend/schema.sql
+- Seed database: node backend/seed.js
    
 **3.Backend Setup**
---cd backend
---npm install
---npm start
---Backend will run at: http://localhost:8000
+- cd backend
+- npm install
+- npm start
+- Backend will run at: http://localhost:8000
 
   **4. Frontend Setup**
-   -cd ../frontend
-   -npm install
-   -npm run dev
-   -Frontend will run at: http://localhost:5173
+   - cd ../frontend
+   - npm install
+   - npm run dev
+   - Frontend will run at: http://localhost:5173
   --- 
 
   ## Database Schema
