@@ -70,13 +70,8 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
  - npm run dev
  - Frontend will run at: http://localhost:5173 
   --- 
-
- ## Database Schema
-  
-  <small>
-
-```sql
-CREATE TABLE IF NOT EXISTS profiles (
+## Database Schema
+ CREATE TABLE IF NOT EXISTS profiles (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
@@ -84,23 +79,23 @@ CREATE TABLE IF NOT EXISTS profiles (
     github TEXT,
     linkedin TEXT,
     portfolio TEXT
-);
+ );
 
-CREATE TABLE IF NOT EXISTS skills (
+ CREATE TABLE IF NOT EXISTS skills (
     id SERIAL PRIMARY KEY,
     name TEXT,
     level TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
-);
+ );
 
-CREATE TABLE IF NOT EXISTS projects (
+ CREATE TABLE IF NOT EXISTS projects (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
     link TEXT,
     skill TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
-);
+ );
 
 ---
 ** Sample Data**
