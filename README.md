@@ -51,28 +51,28 @@ candidate-playground/
 
 ## Local Development
 **1. Clone the repo**
-- git clone https://github.com/Pradeepkg1/profiles-projects-app.git 
-- cd candidate-playground .
+ - git clone https://github.com/Pradeepkg1/profiles-projects-app.git 
+ - cd candidate-playground .
    
-**2.Database Setup**
-- Create a PostgreSQL database: createdb playground
-- Run schema: psql -d playground -f backend/schema.sql
-- Seed database: node backend/seed.js
+**2. Database Setup**
+( - Create a PostgreSQL database: createdb playground
+ - Run schema: psql -d playground -f backend/schema.sql
+ - Seed database: node backend/seed.js )
    
-**3.Backend Setup**
-. cd backend
-. npm install
-. npm start
-. Backend will run at: http://localhost:8000
+**3. Backend Setup**
+ (- cd backend
+ - npm install
+ - npm start
+ - Backend will run at: http://localhost:8000 )
 
 **4. Frontend Setup**
-   . cd ../frontend
-   . npm install
-   . npm run dev
-   . Frontend will run at: http://localhost:5173
+ (- cd ../frontend
+ - npm install
+ - npm run dev
+ - Frontend will run at: http://localhost:5173 )
   --- 
 
-  ## Database Schema
+ ## Database Schema
   
    CREATE TABLE IF NOT EXISTS profiles (
     id SERIAL PRIMARY KEY,
@@ -82,66 +82,72 @@ candidate-playground/
     github TEXT,
     linkedin TEXT,
     portfolio TEXT
-);
+    );
 
-CREATE TABLE IF NOT EXISTS skills (
+  CREATE TABLE IF NOT EXISTS skills (
     id SERIAL PRIMARY KEY,
     name TEXT,
     level TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
-);
+   );
 
-CREATE TABLE IF NOT EXISTS projects (
+  CREATE TABLE IF NOT EXISTS projects (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
     link TEXT,
     skill TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
-);
+   );
 ---
-## Sample Data
+** Sample Data**
 
-INSERT INTO profiles (name, email, education, github, linkedin, portfolio)
-VALUES ('John Doe', 'john@example.com', 'B.Sc. Computer Science',
+  INSERT INTO profiles (name, email, education, github, linkedin, portfolio)
+  VALUES ('John Doe', 'john@example.com', 'B.Sc. Computer Science',
         'https://github.com/johndoe',
         'https://linkedin.com/in/johndoe',
         'https://portfolio.com/johndoe');
 
-INSERT INTO skills (name, level, profile_id)
-VALUES ('JavaScript', 'Advanced', 1),
+  INSERT INTO skills (name, level, profile_id)
+  VALUES ('JavaScript', 'Advanced', 1),
        ('Python', 'Intermediate', 1);
 
-INSERT INTO projects (title, description, link, skill, profile_id)
-VALUES ('Portfolio Website', 'Personal portfolio in React', 'https://portfolio.com', 'JavaScript', 1);
+  INSERT INTO projects (title, description, link, skill, profile_id)
+  VALUES ('Portfolio Website', 'Personal portfolio in React', 'https://portfolio.com', 'JavaScript', 1);
 
----
+   ---
 
 
 ## API Usage (cURL / Postman):
 
- **Get all profiles:**
-curl http://localhost:8000/profiles
+  **Get all profiles:**
+    (curl http://localhost:8000/profiles)
 
-**Get all projects:**
-curl http://localhost:8000/projects
+  **Get all projects:**
+     (curl http://localhost:8000/projects)
 
-**Search projects by skill:**
-curl "http://localhost:8000/projects?skill=JavaScript"
+  **Search projects by skill:**
+    (curl "http://localhost:8000/projects?skill=JavaScript")
 
-**Global search (profiles + projects):**
-curl "http://localhost:8000/search?q=React"
+  **Global search (profiles + projects):**
+    (curl "http://localhost:8000/search?q=React")
 
-**Top skills:**
-curl http://localhost:8000/skills/top
-
+  **Top skills:**
+    (curl http://localhost:8000/skills/top)
+---
 
 
 ## ⚠️ Known Limitations
-  1.No authentication (anyone can access the API).
-  2.Search is case-insensitive but limited to simple ILIKE queries.
-  3.Only one profile/project is seeded by default (extend seed.js for more).
-  4.Not optimized for large datasets (no pagination yet).
+  - 1.No authentication (anyone can access the API).
+  - 2.Search is case-insensitive but limited to simple ILIKE queries.
+  - 3.Only one profile/project is seeded by default (extend seed.js for more).
+  - 4.Not optimized for large datasets (no pagination yet).
+
+---
+
+## 👤 About Me
+- Name: Pradeep Kumar Gond  
+- [📄 Click here to view my Resume](https://drive.google.com/file/d/1sfhnNHpvbUFcGyDE0CsvewxDQzWNYcVE/view?usp=sharing)  
 
 
 
