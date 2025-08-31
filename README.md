@@ -101,10 +101,10 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
 ** Sample Data**
 
   INSERT INTO profiles (name, email, education, github, linkedin, portfolio)
-  VALUES ('John Doe', 'john@example.com', 'B.Sc. Computer Science',
-        'https://github.com/johndoe',
-        'https://linkedin.com/in/johndoe',
-        'https://portfolio.com/johndoe');
+  VALUES ('pradeep', 'pradeep@example.com', 'B.Tech. Computer Science',
+        'https://github.com/Pradeepkg1',
+        'https://www.linkedin.com/in/pradeep-kumar-gond-715948257/',
+        'https://portfolio.com/pradeep');
 
   INSERT INTO skills (name, level, profile_id)
   VALUES ('JavaScript', 'Advanced', 1),
