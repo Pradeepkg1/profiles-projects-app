@@ -63,16 +63,17 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
  - cd backend
  - npm install
  - npm start
- # Backend will run at: http://localhost:8000 
+ - Backend will run at: http://localhost:8000 
 
 **4. Frontend Setup**
  - cd ../frontend
  - npm install
  - npm run dev
- # Frontend will run at: http://localhost:5173 
+ - Frontend will run at: http://localhost:5173 
   --- 
 ## Database Schema
 <small>
+ sql
  CREATE TABLE IF NOT EXISTS profiles (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
