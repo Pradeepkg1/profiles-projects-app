@@ -29,3 +29,24 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
 
 ## Project Structure
 
+candidate-playground/
+│── backend/              # Express + PostgreSQL server
+│   ├── index.js          # API routes (/profiles, /projects)
+│   ├── db.js             # Database connection
+│   └── package.json
+│
+│── frontend/             # React app (Vite)
+│   ├── src/
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   ├── api.js
+│   │   ├── components/
+│   │   │   ├── Profile.jsx
+│   │   │   ├── Projects.jsx
+│   │   │   └── Search.jsx
+│   └── package.json
+│
+└── README.md
+
+
+
