@@ -27,26 +27,26 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
 
 ---
 
-## Project Structure
-
+**Project Structure**
 candidate-playground/
-│── backend/              
-│   ├── index.js          
-│   ├── db.js             
-│   └── package.json
-│
-│── frontend/             
-│   ├── src/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   ├── api.js
-│   │   ├── components/
-│   │   │   ├── Profile.jsx
-│   │   │   ├── Projects.jsx
-│   │   │   └── Search.jsx
-│   └── package.json
-│
-└── README.md
+ │── backend/              
+ │   ├── index.js          
+ │   ├── db.js             
+ │   └── package.json
+ │
+ │── frontend/             
+ │   ├── src/
+ │   │   ├── App.jsx
+ │   │   ├── main.jsx
+ │   │   ├── api.js
+ │   │   ├── components/
+ │   │   │   ├── Profile.jsx
+ │   │   │   ├── Projects.jsx
+ │   │   │   └── Search.jsx
+ │   └── package.json
+ │
+ └── README.md
+  
 ---
 
 ## Local Development
@@ -60,16 +60,16 @@ candidate-playground/
 - Seed database: node backend/seed.js
    
 **3.Backend Setup**
-- cd backend
-- npm install
-- npm start
-- Backend will run at: http://localhost:8000
+. cd backend
+. npm install
+. npm start
+. Backend will run at: http://localhost:8000
 
-  **4. Frontend Setup**
-   - cd ../frontend
-   - npm install
-   - npm run dev
-   - Frontend will run at: http://localhost:5173
+**4. Frontend Setup**
+   . cd ../frontend
+   . npm install
+   . npm run dev
+   . Frontend will run at: http://localhost:5173
   --- 
 
   ## Database Schema
