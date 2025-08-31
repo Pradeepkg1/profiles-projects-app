@@ -35,7 +35,6 @@ candidate-playground/
 │   ├── db.js             
 │   └── package.json
 │
-
 │── frontend/             
 │   ├── src/
 │   │   ├── App.jsx
@@ -51,9 +50,9 @@ candidate-playground/
 ---
 
 ## Local Development
-**1. Clone the repo**
--git clone https://github.com/Pradeepkg1/profiles-projects-app.git  
--cd candidate-playground
+***1. Clone the repo***
+-git clone https://github.com/Pradeepkg1/profiles-projects-app.git .
+-cd candidate-playground .
    
 **2.Database Setup**
 -Create a PostgreSQL database: createdb playground
