@@ -27,7 +27,7 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
 
 ---
 **Project Structure**
-
+```sql
  candidate-playground/
    │── backend/              
    │   ├── index.js          
@@ -46,7 +46,7 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
    │   └── package.json
    │
    └── README.md
-  
+  ```
 ---
 
 ## Local Development
