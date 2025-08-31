@@ -7,6 +7,8 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview"
+    "start": "react-scripts start",
+  "build": "react-scripts build",
   },
   "keywords": [],
   "author": "",
