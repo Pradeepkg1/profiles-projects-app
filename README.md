@@ -27,24 +27,25 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
 
 ---
 **Project Structure**
+
  candidate-playground/
- │── backend/              
- │   ├── index.js          
- │   ├── db.js             
- │   └── package.json
- │
- │── frontend/             
- │   ├── src/
- │   │   ├── App.jsx
- │   │   ├── main.jsx
- │   │   ├── api.js
- │   │   ├── components/
- │   │   │   ├── Profile.jsx
- │   │   │   ├── Projects.jsx
- │   │   │   └── Search.jsx
- │   └── package.json
- │
- └── README.md
+   │── backend/              
+   │   ├── index.js          
+   │   ├── db.js             
+   │   └── package.json
+   │
+   │── frontend/             
+   │   ├── src/
+   │   │   ├── App.jsx
+   │   │   ├── main.jsx
+   │   │   ├── api.js
+   │   │   ├── components/
+   │   │   │   ├── Profile.jsx
+   │   │   │   ├── Projects.jsx
+   │   │   │   └── Search.jsx
+   │   └── package.json
+   │
+   └── README.md
   
 ---
 
@@ -62,15 +63,16 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
  - cd backend
  - npm install
  - npm start
- - Backend will run at: http://localhost:8000 
+ # Backend will run at: http://localhost:8000 
 
 **4. Frontend Setup**
  - cd ../frontend
  - npm install
  - npm run dev
- - Frontend will run at: http://localhost:5173 
+ # Frontend will run at: http://localhost:5173 
   --- 
 ## Database Schema
+<small>
  CREATE TABLE IF NOT EXISTS profiles (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
@@ -79,27 +81,28 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
     github TEXT,
     linkedin TEXT,
     portfolio TEXT
- );
+);
 
- CREATE TABLE IF NOT EXISTS skills (
+CREATE TABLE IF NOT EXISTS skills (
     id SERIAL PRIMARY KEY,
     name TEXT,
     level TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
- );
+);
 
- CREATE TABLE IF NOT EXISTS projects (
+CREATE TABLE IF NOT EXISTS projects (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
     link TEXT,
     skill TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
- );
+);
 
+</small>
 ---
 ** Sample Data**
-
+  <small>
   INSERT INTO profiles (name, email, education, github, linkedin, portfolio)
   VALUES ('pradeep', 'pradeep@example.com', 'B.Tech. Computer Science',
         'https://github.com/Pradeepkg1',
@@ -112,7 +115,7 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
 
   INSERT INTO projects (title, description, link, skill, profile_id)
   VALUES ('Portfolio Website', 'Personal portfolio in React', 'https://portfolio.com', 'JavaScript', 1);
-
+  </small>
    ---
 
 
