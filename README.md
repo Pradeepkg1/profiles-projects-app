@@ -26,9 +26,8 @@ Built with **React (Vite)** on the frontend and **PostgreSQL + Node/Express** on
 - PostgreSQL
 
 ---
-
 **Project Structure**
-candidate-playground/
+ candidate-playground/
  │── backend/              
  │   ├── index.js          
  │   ├── db.js             
@@ -55,26 +54,29 @@ candidate-playground/
  - cd candidate-playground .
    
 **2. Database Setup**
-( - Create a PostgreSQL database: createdb playground
+ - Create a PostgreSQL database: createdb playground
  - Run schema: psql -d playground -f backend/schema.sql
- - Seed database: node backend/seed.js )
+ - Seed database: node backend/seed.js 
    
 **3. Backend Setup**
- (- cd backend
+ - cd backend
  - npm install
  - npm start
- - Backend will run at: http://localhost:8000 )
+ - Backend will run at: http://localhost:8000 
 
 **4. Frontend Setup**
- (- cd ../frontend
+ - cd ../frontend
  - npm install
  - npm run dev
- - Frontend will run at: http://localhost:5173 )
+ - Frontend will run at: http://localhost:5173 
   --- 
 
  ## Database Schema
   
-   CREATE TABLE IF NOT EXISTS profiles (
+  <small>
+
+```sql
+CREATE TABLE IF NOT EXISTS profiles (
     id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     email TEXT UNIQUE NOT NULL,
@@ -82,23 +84,24 @@ candidate-playground/
     github TEXT,
     linkedin TEXT,
     portfolio TEXT
-    );
+);
 
-  CREATE TABLE IF NOT EXISTS skills (
+CREATE TABLE IF NOT EXISTS skills (
     id SERIAL PRIMARY KEY,
     name TEXT,
     level TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
-   );
+);
 
-  CREATE TABLE IF NOT EXISTS projects (
+CREATE TABLE IF NOT EXISTS projects (
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     description TEXT,
     link TEXT,
     skill TEXT,
     profile_id INT REFERENCES profiles(id) ON DELETE CASCADE
-   );
+);
+
 ---
 ** Sample Data**
 
@@ -121,19 +124,19 @@ candidate-playground/
 ## API Usage (cURL / Postman):
 
   **Get all profiles:**
-    (curl http://localhost:8000/profiles)
+    curl http://localhost:8000/profiles
 
   **Get all projects:**
-     (curl http://localhost:8000/projects)
+     curl http://localhost:8000/projects
 
   **Search projects by skill:**
-    (curl "http://localhost:8000/projects?skill=JavaScript")
+    curl "http://localhost:8000/projects?skill=JavaScript"
 
   **Global search (profiles + projects):**
-    (curl "http://localhost:8000/search?q=React")
+    curl "http://localhost:8000/search?q=React"
 
   **Top skills:**
-    (curl http://localhost:8000/skills/top)
+    curl http://localhost:8000/skills/top
 ---
 
 
