@@ -102,6 +102,7 @@ CREATE TABLE IF NOT EXISTS projects (
 ```
 ---
 ** Sample Data**
+```sql
   <small>
   INSERT INTO profiles (name, email, education, github, linkedin, portfolio)
   VALUES ('pradeep', 'pradeep@example.com', 'B.Tech. Computer Science',
@@ -116,6 +117,7 @@ CREATE TABLE IF NOT EXISTS projects (
   INSERT INTO projects (title, description, link, skill, profile_id)
   VALUES ('Portfolio Website', 'Personal portfolio in React', 'https://portfolio.com', 'JavaScript', 1);
   </small>
+```
    ---
 
 
